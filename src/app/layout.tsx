@@ -42,7 +42,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col font-satoshi">
         <NavBar />
-        <main>{children}</main>
+        <main
+        className="mt-30">{children}</main>
       </body>
     </html>
   );

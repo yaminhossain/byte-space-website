@@ -20,36 +20,46 @@ function NavBar() {
   ];
 
   const pathName = usePathname();
-  console.log("Pathname: ", pathName);
-  return (
-    <nav className="container py-11.75 bg-electric-violet-800 flex justify-between">
-      <div>
-        <Link href={"/"}>
-          <NavBarLogo />
-        </Link>
-      </div>
 
-      <div className="text-white body-md flex gap-6">
-        {routes.slice(0, 3).map((route) => (
-          <Link
-            key={route.path}
-            href={route.path}
-            className={`hover:underline ${pathName === route.path && "underline"}`}
-          >
-            {route.label}
+  return (
+    <nav className="fixed top-0 left-0 z-50 w-full bg-electric-violet-800 grid-background h-30">
+      <div className="container flex justify-between py-10">
+        {/* Logo */}
+        <div>
+          <Link href="/">
+            <NavBarLogo />
           </Link>
-        ))}
-      </div>
-      <div className="text-white body-md flex gap-6">
-        {routes.slice(3, 6).map((route) => (
-          <Link
-            key={route.path}
-            href={route.path}
-            className={`hover:underline ${pathName === route.path && "underline"}`}
-          >
-            {route.label}
-          </Link>
-        ))}
+        </div>
+
+        {/* Main navigation */}
+        <div className="body-md flex gap-6 text-white">
+          {routes.slice(0, 3).map((route) => (
+            <Link
+              key={route.path}
+              href={route.path}
+              className={`hover:underline ${
+                pathName === route.path ? "underline" : ""
+              }`}
+            >
+              {route.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Right navigation */}
+        <div className="body-md flex gap-6 text-white">
+          {routes.slice(3, 6).map((route) => (
+            <Link
+              key={route.path}
+              href={route.path}
+              className={`hover:underline ${
+                pathName === route.path ? "underline" : ""
+              }`}
+            >
+              {route.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
