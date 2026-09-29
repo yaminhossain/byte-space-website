@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
-import NavBarLogo from "./navbar-logo";
-import CartIcon from "./cart-icon";
+import NavBarLogo from "./svg-icons/navbar-logo";
+import CartIcon from "./svg-icons/cart-icon";
 
 function NavBar() {
   const routes: { path: string; label: ReactNode }[] = [
@@ -22,8 +22,8 @@ function NavBar() {
   const pathName = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-electric-violet-800 grid-background h-30">
-      <div className="container flex justify-between py-10">
+    <nav className="fixed top-0 left-0 z-50 h-30 w-full bg-electric-violet-800 grid-background">
+      <div className="container flex justify-between h-30 py-10">
         {/* Logo */}
         <div>
           <Link href="/">

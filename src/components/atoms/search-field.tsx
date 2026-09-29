@@ -1,4 +1,4 @@
-import SearchIcon from "./search-icon";
+import SearchIcon from "./svg-icons/search-icon";
 
 interface SearchIconProps extends React.ComponentPropsWithoutRef<"input"> {
   placeholder: string;
