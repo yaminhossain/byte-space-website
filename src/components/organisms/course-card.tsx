@@ -37,7 +37,7 @@ function CourseCard({
       <div className="relative">
         <div
           className={cn(
-            "relative w-[341px] h-[195px] rounded-3xl overflow-hidden",
+            "relative w-85.25 h-48.75 rounded-3xl overflow-hidden",
             imgClassName,
           )}
         >
@@ -66,7 +66,7 @@ function CourseCard({
         </p>
       </div>
 
-      {/* facepile and badge section */}
+      {/* facePile and badge section */}
       <div className="flex gap-3 my-4">
         <Badge
           text="Beginner"

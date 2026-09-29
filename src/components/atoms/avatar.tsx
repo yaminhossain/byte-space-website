@@ -1,7 +1,7 @@
 import { cn } from "@/utils/helper";
 import Image from "next/image";
 
-type AvatarSize = "sm" | "md";
+type AvatarSize = "sm" | "md" | "lg";
 
 interface AvatarProps {
   src: string;
@@ -13,6 +13,7 @@ interface AvatarProps {
 const sizes: Record<AvatarSize, string> = {
   sm: "size-8",
   md: "size-[43px]",
+  lg: "size-20",
 };
 
 function Avatar({ src, size, alt, className }: AvatarProps) {

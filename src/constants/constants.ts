@@ -43,3 +43,17 @@ export const courseCardImages: string[] = [
   "/images/course-card/course-card-imag-5.jpg",
   "/images/course-card/course-card-imag-6.jpg",
 ];
+
+interface category {
+  icon: string;
+  label: string;
+}
+
+export const categories: category[] = [
+  { icon: "/icons/categories/category-1.svg", label: "Design" },
+  { icon: "/icons/categories/category-2.svg", label: "Development" },
+  { icon: "/icons/categories/category-3.svg", label: "IT & Software" },
+  { icon: "/icons/categories/category-4.svg", label: "Business" },
+  { icon: "/icons/categories/category-5.svg", label: "Marketing" },
+  { icon: "/icons/categories/category-6.svg", label: "Photography" },
+];
