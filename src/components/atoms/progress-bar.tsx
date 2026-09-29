@@ -1,17 +1,18 @@
 import { cn } from "@/utils/helper";
-import React from "react";
 
-function ProgressBar({
-  progress,
-  className,
-}: {
-  progress: string;
+type ProgressBarProps = {
+  progress: number;
   className?: string;
-}) {
+};
+
+function ProgressBar({ progress, className }: ProgressBarProps) {
+  const value = Math.min(100, Math.max(0, progress));
+
   return (
-    <div className={cn("h-2 rounded-2xl w-full", className)}>
+    <div className={cn("h-2 w-full rounded-2xl", className)}>
       <div
-        className={cn(`bg-crimson-400 rounded-2xl h-full w-[${progress}]`)}
+        className="h-full rounded-2xl bg-crimson-400"
+        style={{ width: `${value}%` }}
       />
     </div>
   );
