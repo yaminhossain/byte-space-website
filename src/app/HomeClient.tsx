@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/components/atoms/avatar";
 import Button from "@/components/atoms/button";
 import SearchField from "@/components/atoms/search-field";
 import SmallHeroCard from "@/components/molecules/small-hero-card";
@@ -18,7 +19,11 @@ function HomeClient() {
 
       <Button>Search</Button>
       <SmallHeroCard />
-      <div className="h-90 container bg-crimson-800"></div>
+      <Avatar
+        size="md"
+        src="/images/avatars/avatar1.png"
+        alt="avatar1"
+      />
     </div>
   );
 }
