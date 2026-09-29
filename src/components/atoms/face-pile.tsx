@@ -1,38 +1,40 @@
-import Image from "next/image";
+import { cn } from "@/utils/helper";
+import Avatar from "./avatar";
 
-const avatars = [
-  "/avatars/avatar-1.jpg",
-  "/avatars/avatar-2.jpg",
-  "/avatars/avatar-3.jpg",
-  "/avatars/avatar-4.jpg",
-  "/avatars/avatar-5.jpg",
-  "/avatars/avatar-6.jpg",
-];
+type AvatarSize = "sm" | "md";
+interface FacePileProps {
+  images: string[];
+  count?: number | string;
+  size?: AvatarSize;
+  className?: string;
+}
 
-export default function FacePile() {
+function FacePile({ images, count, size = "md", className }: FacePileProps) {
   return (
-    <div className="flex items-center">
-      {avatars.map((avatar, index) => (
+    <div className={cn("flex items-center", className)}>
+      {images.map((image, index) => (
         <div
-          key={avatar}
-          className={`relative h-10 w-10 overflow-hidden rounded-full border-2 border-white ${
-            index !== 0 ? "-ml-2" : ""
-          }`}
+          key={`${image}-${index}`}
+          className={cn("relative rounded-full", index > 0 && "-ml-2")}
         >
-          <Image
-            src={avatar}
-            alt={`User ${index + 1}`}
-            fill
-            sizes="40px"
-            className="object-cover"
-          />
+          <Avatar src={image} alt={`User ${index + 1}`} size={size} />
         </div>
       ))}
 
-      {/* Count */}
-      <div className="-ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#D7FF00] text-[12px] font-bold text-black">
-        2K+
-      </div>
+      {count !== undefined && (
+        <div
+          className={cn(
+            "relative z-10 -ml-2 flex shrink-0 items-center justify-center rounded-full",
+            "bg-crimson-400 label-xs text-black-950",
+            size === "sm" && "size-8 ",
+            size === "md" && "size-10.75 ",
+          )}
+        >
+          {count}+
+        </div>
+      )}
     </div>
   );
 }
+
+export default FacePile;
