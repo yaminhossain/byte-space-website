@@ -157,7 +157,8 @@
 
 /* Decorative radial gradients */
 
-@utility gradient-01 {
+/* Lime glow - medium */
+@utility gradient-lime {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(203, 252, 1, 0.4) 0%,
@@ -168,7 +169,8 @@
   backdrop-filter: blur(40px);
 }
 
-@utility gradient-02 {
+/* Blue glow - subtle */
+@utility gradient-blue-subtle {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(0, 59, 226, 0.08) 0%,
@@ -179,7 +181,8 @@
   backdrop-filter: blur(40px);
 }
 
-@utility gradient-03 {
+/* Blue glow - medium */
+@utility gradient-blue {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(0, 59, 226, 0.16) 0%,
@@ -190,7 +193,8 @@
   backdrop-filter: blur(40px);
 }
 
-@utility gradient-04 {
+/* Blue glow - strong */
+@utility gradient-blue-strong {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(0, 59, 226, 0.24) 0%,
@@ -201,34 +205,13 @@
   backdrop-filter: blur(40px);
 }
 
-@utility gradient-05 {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 59, 226, 0.24) 0%,
-    rgba(0, 59, 226, 0.0552) 53%,
-    rgba(0, 59, 226, 0.0144) 75%,
-    rgba(0, 59, 226, 0) 100%
-  );
-  backdrop-filter: blur(40px);
-}
-
-@utility gradient-06 {
+/* Lime glow - strong */
+@utility gradient-lime-strong {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(203, 252, 1, 0.6) 0%,
     rgba(203, 252, 1, 0.138) 53%,
     rgba(203, 252, 1, 0.036) 75%,
-    rgba(203, 252, 1, 0) 100%
-  );
-  backdrop-filter: blur(40px);
-}
-
-@utility gradient-07 {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(203, 252, 1, 0.4) 0%,
-    rgba(203, 252, 1, 0.092) 53%,
-    rgba(203, 252, 1, 0.024) 75%,
     rgba(203, 252, 1, 0) 100%
   );
   backdrop-filter: blur(40px);
