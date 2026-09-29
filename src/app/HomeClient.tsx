@@ -26,13 +26,17 @@ function HomeClient() {
         onChange={(e: ChangeEvent<HTMLInputElement>) => handleSearch(e)}
       />
       <Button>Search</Button>
-      <SmallHeroCard />
+      <SmallHeroCard
+        titleLarge="UI/UX Design"
+        titleSmall="Learning Progress"
+        subtitle="200 Courses • 1000+ Students"
+      />
       <Avatar size="md" src="/images/avatars/avatar1.png" alt="avatar1" />
       <FacePile images={avatars} count={"2k+"} />
       <ProgressBar progress={50} />
       <Pill>children</Pill>
       <Badge text="Beginner" icon={<SignalCellularAlt />} />
-      <Skeleton className="w-30 h-6"/>
+      <Skeleton className="w-30 h-6" />
     </div>
   );
 }
