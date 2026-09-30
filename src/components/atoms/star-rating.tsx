@@ -11,7 +11,7 @@ interface StarRatingProps {
 function StarRating({ rating, iconColor, className }: StarRatingProps) {
   return (
     <div className={"flex justify-center items-center gap-0.5"}>
-      <p className={cn("body-xs", className)}>{rating}</p>
+      <div className={cn("body-xs", className)}>{rating}</div>
       <StarIcon iconColor={iconColor} />
     </div>
   );

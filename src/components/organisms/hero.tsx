@@ -5,6 +5,7 @@ import SmallHeroCard from "../molecules/small-hero-card";
 import FacePile from "../atoms/face-pile";
 import { avatars } from "@/constants/constants";
 import ProgressBar from "../atoms/progress-bar";
+import ReviewSnippet from "./review-snippet";
 
 function Hero() {
   return (
@@ -57,18 +58,7 @@ function Hero() {
           {/* background blue circle */}
           <div className="size-[500px] rounded-full absolute top-75 left-1/2 -translate-x-1/2 bg-electric-violet-800 " />
 
-          <SmallHeroCard
-            titleLarge="Happy Students"
-            headSectionClassName="flex flex-col items-start"
-            rating={
-              <p className="body-xs">
-                4.5 <span className="text-black-400">(240)</span>
-              </p>
-            }
-            className="flex flex-col items-start w-64.5 gap-2 absolute top-[255px] left-[183px] z-3"
-          >
-            <FacePile images={avatars} count={"2K"} size="md" />
-          </SmallHeroCard>
+          <ReviewSnippet className="absolute top-[255px] left-[183px] z-3" />
 
           <SmallHeroCard
             titleSmall="Learning Progress"

@@ -9,7 +9,7 @@ function PartnerLogo2() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="Frame" clip-path="url(#clip0_1_1720)">
+      <g id="Frame" clipPath="url(#clip0_1_1720)">
         <path
           id="Vector"
           d="M49.2773 28.9525H61.2293V25.3525H53.5253V11.7925H49.2773V28.9525Z"
