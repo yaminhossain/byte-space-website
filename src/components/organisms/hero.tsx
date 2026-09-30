@@ -9,7 +9,7 @@ import ReviewSnippet from "./review-snippet";
 
 function Hero() {
   return (
-    <div className="h-226 w-full overflow-hidden bg-electric-violet-800 grid-background">
+    <div className="h-226 relative w-full overflow-hidden bg-electric-violet-800 grid-background">
       <section className="container relative">
         <h1 className="max-w-[935px] pt-12.25 mx-auto heading-lg text-white text-center">
           Get Access to Hundreds Courses Available
@@ -23,26 +23,6 @@ function Hero() {
         <div className="flex gap-4 mt-15 items-center justify-center">
           <SearchField placeholder="Course, topic, creator" />
           <Button className="w-26 h-11.5">Search</Button>
-        </div>
-
-        {/* middle curl left decoration */}
-        <div className="size-[385px] absolute top-[101px] -left-[180px]">
-          <Image
-            src={"/images/hero-section/hero-curl-crimson-decoration.png"}
-            fill
-            alt="hero-curl-crimson-decoration"
-            className="object-center object-contain"
-          />
-        </div>
-
-        {/* middle curl right decoration */}
-        <div className="size-[370px] absolute top-[101px] -right-[200px]">
-          <Image
-            src={"/images/hero-section/hero-cilinder-crimson-decoration.png"}
-            fill
-            alt="hero-curl-crimson-decoration"
-            className="object-center object-contain"
-          />
         </div>
 
         <div className="relative mx-auto mt-[70px] size-[1149px] rounded-full bg-crimson-500">
@@ -115,6 +95,26 @@ function Hero() {
           </div>
         </div>
       </section>
+
+      {/* middle curl left decoration */}
+      <div className="size-[385px] absolute top-[101px] -left-[60px]">
+        <Image
+          src={"/images/hero-section/hero-curl-crimson-decoration.png"}
+          fill
+          alt="hero-curl-crimson-decoration"
+          className="object-center object-contain"
+        />
+      </div>
+
+      {/* middle cylinder right decoration */}
+      <div className="size-[370px] absolute top-[101px] -right-[90px]">
+        <Image
+          src={"/images/hero-section/hero-cilinder-crimson-decoration.png"}
+          fill
+          alt="hero-curl-crimson-decoration"
+          className="object-center object-contain"
+        />
+      </div>
     </div>
   );
 }
