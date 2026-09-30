@@ -166,7 +166,7 @@
     rgba(203, 252, 1, 0.024) 75%,
     rgba(203, 252, 1, 0) 100%
   );
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
 }
 
 /* Blue glow - subtle */
@@ -178,7 +178,7 @@
     rgba(0, 59, 226, 0.0048) 75%,
     rgba(0, 59, 226, 0) 100%
   );
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
 }
 
 /* Blue glow - medium */
@@ -190,7 +190,7 @@
     rgba(0, 59, 226, 0.0096) 75%,
     rgba(0, 59, 226, 0) 100%
   );
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
 }
 
 /* Blue glow - strong */
@@ -202,7 +202,7 @@
     rgba(0, 59, 226, 0.0144) 75%,
     rgba(0, 59, 226, 0) 100%
   );
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
 }
 
 /* Lime glow - strong */
@@ -214,5 +214,11 @@
     rgba(203, 252, 1, 0.036) 75%,
     rgba(203, 252, 1, 0) 100%
   );
-  backdrop-filter: blur(40px);
+  /* backdrop-filter: blur(40px); */
 }
+
+/* 
+
+background: radial-gradient(50% 50% at 50% 50%, rgba(203, 252, 1, 0.4) 0%, rgba(203, 252, 1, 0.092) 53%, rgba(203, 252, 1, 0.024) 75%, rgba(203, 252, 1, 0) 100%);
+
+*/

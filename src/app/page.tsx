@@ -5,6 +5,7 @@ import ProductSummary from "@/components/organisms/product-summary";
 import HomeFeaturedCourses from "@/components/templates/home-featured-courses";
 import HomeCategoriesContainer from "@/components/molecules/home-categories-container";
 import HomeBottomBannerSection from "@/components/molecules/home-bottom-banner-section";
+import HomeDiscoverCommunity from "@/components/molecules/home-discover-community";
 
 export const metadata: Metadata = {
   title: "Home | ByteSpace",
@@ -17,10 +18,13 @@ export default function Home() {
       <PartnerBanner />
       <HomeFeaturedCourses />
       <HomeCategoriesContainer />
+      <ProductSummary />
       <HomeBottomBannerSection />
-      {/* <ProductSummary /> */}
+      <HomeDiscoverCommunity />
 
-      <div className="h-5"></div>
+      <div className="h-5 text-center text-red-500">
+        Dummy need to be removed
+      </div>
     </div>
   );
 }
