@@ -37,11 +37,11 @@ export const courseCardAvatars: string[] = [
 
 export const courseCardImages: string[] = [
   "/images/course-card/course-card-imag-1.jpg",
-  "/images/course-card/course-card-imag-2.jpg",
-  "/images/course-card/course-card-imag-3.jpg",
-  "/images/course-card/course-card-imag-4.jpg",
-  "/images/course-card/course-card-imag-5.jpg",
-  "/images/course-card/course-card-imag-6.jpg",
+  "/images/course-card/course-card-image-2.jpg",
+  "/images/course-card/course-card-image-3.jpg",
+  "/images/course-card/course-card-image-4.jpg",
+  "/images/course-card/course-card-image-5.jpg",
+  "/images/course-card/course-card-image-6.jpg",
 ];
 
 interface category {
