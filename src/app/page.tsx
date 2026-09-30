@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import HomeClient from "./HomeClient";
+import Hero from "@/components/organisms/hero";
+import PartnerBanner from "@/components/atoms/partner-banner";
 
 export const metadata: Metadata = {
   title: "Home | ByteSpace",
@@ -7,11 +8,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="h-226 bg-electric-violet-800 grid-background">
-      <h1 className="text-7xl text-center font-satoshi font-medium">
-        HOME PAGE
-      </h1>
-      <HomeClient />
+    <div>
+      <Hero />
+      <PartnerBanner />
     </div>
   );
 }

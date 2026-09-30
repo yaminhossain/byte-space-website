@@ -1,4 +1,4 @@
-import { cn } from "@/utils/helper";
+ import { cn } from "@/utils/helper";
 
 type InputVariant = "pill" | "rounded";
 
@@ -11,7 +11,7 @@ function Input({ variant = "pill", className, ...props }: InputProps) {
     <input
       {...props}
       className={cn(
-        "body-md h-13 w-full bg-white px-6 text-black-950 placeholder:text-black-400 focus:outline-none",
+        "body-md h-13 w-full bg-white px-6 text-black-950 placeholder:text-black-400  focus:outline-none",
         {
           "rounded-full border border-black-200": variant === "pill",
           "rounded-xl border border-black-100": variant === "rounded",

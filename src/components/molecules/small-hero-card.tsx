@@ -10,8 +10,9 @@ interface SmallHeroCardProps {
   titleLarge?: string;
   titleSmall?: string;
   subtitle?: string;
-  rating?: number;
+  rating?: number | ReactNode;
   starIconColor?: iconColor;
+  headSectionClassName?: string;
 }
 
 function SmallHeroCard({
@@ -22,20 +23,27 @@ function SmallHeroCard({
   subtitle,
   rating,
   starIconColor,
+  headSectionClassName,
 }: SmallHeroCardProps) {
   return (
     <div className={cn("rounded-2xl p-4 bg-white", className)}>
-      {/* title large*/}
-      {titleLarge && <h1 className="label-md text-black-950">{titleLarge}</h1>}
-      {/* title small */}
-      {titleSmall && <h2 className="label-sm text-black-950">{titleSmall}</h2>}
-      {/* Subtitle */}
-      {subtitle && <p className="body-xs text-black-400">{subtitle}</p>}
+      <div className={headSectionClassName}>
+        {/* title large*/}
+        {titleLarge && (
+          <h1 className="label-md text-black-950">{titleLarge}</h1>
+        )}
+        {/* title small */}
+        {titleSmall && (
+          <h2 className="label-sm text-black-950">{titleSmall}</h2>
+        )}
+        {/* Subtitle */}
+        {subtitle && <p className="body-xs text-black-400">{subtitle}</p>}
 
-      {/* Star Rating */}
-      {(rating || starIconColor) && (
-        <StarRating rating={rating} iconColor={starIconColor} />
-      )}
+        {/* Star Rating */}
+        {(rating || starIconColor) && (
+          <StarRating rating={rating} iconColor={starIconColor} />
+        )}
+      </div>
 
       {children && children}
     </div>
