@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Black */
+  --black-50: #f5f5f6;
+  --black-100: #e5e6e8;
+  --black-200: #ced0d3;
+  --black-300: #abaeb5;
+  --black-400: #82868e;
+  --black-500: #666973;
+  --black-600: #585a62;
+  --black-700: #4b4c53;
+  --black-800: #424348;
+  --black-900: #3a3b3f;
+  --black-950: #242528;
+
+  /* Electric Violet */
+  --electric-violet-50: #e7f6ff;
+  --electric-violet-100: #d3eeff;
+  --electric-violet-200: #b0ddff;
+  --electric-violet-300: #81c5ff;
+  --electric-violet-400: #4f9dff;
+  --electric-violet-500: #2872ff;
+  --electric-violet-600: #0445ff;
+  --electric-violet-700: #0043ff;
+  --electric-violet-800: #003be2;
+  --electric-violet-900: #0b36a4;
+  --electric-violet-950: #071e5f;
+
+  /* Crimson */
+  --crimson-50: #fdffe4;
+  --crimson-100: #faffc5;
+  --crimson-200: #f2ff92;
+  --crimson-300: #e4ff54;
+  --crimson-400: #d4fb20;
+  --crimson-500: #cbfc01;
+  --crimson-600: #8cb400;
+  --crimson-700: #6a8902;
+  --crimson-800: #546b09;
+  --crimson-900: #465a0d;
+  --crimson-950: #243300;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Fonts */
+  --font-poppins: var(--font-poppins);
+  --font-satoshi: var(--font-satoshi);
+
+  /* Black */
+  --color-black-50: var(--black-50);
+  --color-black-100: var(--black-100);
+  --color-black-200: var(--black-200);
+  --color-black-300: var(--black-300);
+  --color-black-400: var(--black-400);
+  --color-black-500: var(--black-500);
+  --color-black-600: var(--black-600);
+  --color-black-700: var(--black-700);
+  --color-black-800: var(--black-800);
+  --color-black-900: var(--black-900);
+  --color-black-950: var(--black-950);
+
+  /* Electric Violet */
+  --color-electric-violet-50: var(--electric-violet-50);
+  --color-electric-violet-100: var(--electric-violet-100);
+  --color-electric-violet-200: var(--electric-violet-200);
+  --color-electric-violet-300: var(--electric-violet-300);
+  --color-electric-violet-400: var(--electric-violet-400);
+  --color-electric-violet-500: var(--electric-violet-500);
+  --color-electric-violet-600: var(--electric-violet-600);
+  --color-electric-violet-700: var(--electric-violet-700);
+  --color-electric-violet-800: var(--electric-violet-800);
+  --color-electric-violet-900: var(--electric-violet-900);
+  --color-electric-violet-950: var(--electric-violet-950);
+
+  /* Crimson */
+  --color-crimson-50: var(--crimson-50);
+  --color-crimson-100: var(--crimson-100);
+  --color-crimson-200: var(--crimson-200);
+  --color-crimson-300: var(--crimson-300);
+  --color-crimson-400: var(--crimson-400);
+  --color-crimson-500: var(--crimson-500);
+  --color-crimson-600: var(--crimson-600);
+  --color-crimson-700: var(--crimson-700);
+  --color-crimson-800: var(--crimson-800);
+  --color-crimson-900: var(--crimson-900);
+  --color-crimson-950: var(--crimson-950);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Container Width */
+
+@utility container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Typography - Headings */
+
+@utility heading-lg {
+  @apply font-poppins text-[72px] leading-[120%] font-semibold;
 }
+
+@utility heading-md {
+  @apply font-poppins text-[44px] leading-[120%] font-semibold;
+}
+
+@utility heading-sm {
+  @apply font-poppins text-[36px] leading-[120%] font-semibold;
+}
+
+@utility heading-xs {
+  @apply font-poppins text-[20px] leading-[120%] font-semibold;
+}
+
+/* Typography - Body */
+
+@utility body-lg {
+  @apply font-satoshi text-[18px] leading-[160%] font-normal;
+}
+
+@utility body-md {
+  @apply font-satoshi text-[16px] leading-[160%] font-normal;
+}
+
+@utility body-sm {
+  @apply font-satoshi text-[14px] leading-[160%] font-normal;
+}
+
+@utility body-xs {
+  @apply font-satoshi text-[12px] leading-[160%] font-normal;
+}
+
+/* Typography - Labels */
+
+@utility label-lg {
+  @apply font-satoshi text-[18px] leading-[120%] font-medium;
+}
+
+@utility label-md {
+  @apply font-satoshi text-[16px] leading-[120%] font-medium;
+}
+
+@utility label-sm {
+  @apply font-satoshi text-[14px] leading-[120%] font-medium;
+}
+
+@utility label-xs {
+  @apply font-satoshi text-[12px] leading-[120%] font-medium;
+}
+
+@utility grid-background {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+
+  background-size: 120px 120px;
+}
+
+/* Decorative radial gradients */
+
+/* Lime glow - medium */
+@utility gradient-lime {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(203, 252, 1, 0.4) 0%,
+    rgba(203, 252, 1, 0.092) 53%,
+    rgba(203, 252, 1, 0.024) 75%,
+    rgba(203, 252, 1, 0) 100%
+  );
+  /* backdrop-filter: blur(40px); */
+}
+
+/* Blue glow - subtle */
+@utility gradient-blue-subtle {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 59, 226, 0.08) 0%,
+    rgba(0, 59, 226, 0.0184) 53%,
+    rgba(0, 59, 226, 0.0048) 75%,
+    rgba(0, 59, 226, 0) 100%
+  );
+  /* backdrop-filter: blur(40px); */
+}
+
+/* Blue glow - medium */
+@utility gradient-blue {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 59, 226, 0.16) 0%,
+    rgba(0, 59, 226, 0.0368) 53%,
+    rgba(0, 59, 226, 0.0096) 75%,
+    rgba(0, 59, 226, 0) 100%
+  );
+  /* backdrop-filter: blur(40px); */
+}
+
+/* Blue glow - strong */
+@utility gradient-blue-strong {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 59, 226, 0.24) 0%,
+    rgba(0, 59, 226, 0.0552) 53%,
+    rgba(0, 59, 226, 0.0144) 75%,
+    rgba(0, 59, 226, 0) 100%
+  );
+  /* backdrop-filter: blur(40px); */
+}
+
+/* Lime glow - strong */
+@utility gradient-lime-strong {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(203, 252, 1, 0.6) 0%,
+    rgba(203, 252, 1, 0.138) 53%,
+    rgba(203, 252, 1, 0.036) 75%,
+    rgba(203, 252, 1, 0) 100%
+  );
+  /* backdrop-filter: blur(40px); */
+}
+
+
