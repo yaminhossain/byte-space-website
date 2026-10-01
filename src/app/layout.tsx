@@ -15,12 +15,12 @@ const poppins = Poppins({
 const satoshi = localFont({
   src: [
     {
-      path: "/fonts/Satoshi/Satoshi-Regular.woff2",
+      path: "../../public/fonts/Satoshi/Satoshi-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "/fonts/Satoshi/Satoshi-Medium.woff2",
+      path: "../../public/fonts/Satoshi/Satoshi-Medium.woff2",
       weight: "500",
       style: "medium",
     },
