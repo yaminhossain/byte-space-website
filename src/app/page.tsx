@@ -21,10 +21,6 @@ export default function Home() {
       <ProductSummary />
       <HomeBottomBannerSection />
       <HomeDiscoverCommunity />
-
-      <div className="h-5 text-center text-red-500">
-        Dummy need to be removed
-      </div>
     </div>
   );
 }
