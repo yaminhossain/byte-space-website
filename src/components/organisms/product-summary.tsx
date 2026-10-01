@@ -7,9 +7,9 @@ import Checkmark from "../atoms/svg-icons/checkmark";
 
 function ProductSummary() {
   return (
-    <section className="py-30">
+    <section className="py-30 w-full overflow-hidden">
       {/* ============================ Section 01 ================================ */}
-      <section className="relative container border border-red-400">
+      <section className="relative container">
         <div className="flex gap-15.75 items-center">
           {/* Writings */}
           <div className="flex flex-col gap-10">
@@ -88,13 +88,13 @@ function ProductSummary() {
 
         {/* -------------- decoration ---------------- */}
         {/* ellipse-11 */}
-        <div className="absolute bottom-0 right-[344px] size-[1137px] bg-amber-400 rounded-full -z-30" />
+        <div className="absolute bottom-0 right-[344px] size-[1137px] gradient-lime rounded-full -z-30" />
         {/* ellipse-10 */}
-        <div className="absolute bottom-0 left-[690px] size-[1137px] bg-blue-400 rounded-full -z-30" />
+        <div className="absolute bottom-0 left-[690px] size-[1137px] gradient-blue-subtle rounded-full -z-30" />
       </section>
 
       {/* ============================ Section 02 ================================ */}
-      <section className="relative container border border-indigo-600 mt-[72px] flex gap-[79px] items-center">
+      <section className="relative container mt-[72px] flex gap-[79px] items-center">
         <div className="w-[541px] relative h-[596px] overflow-hidden">
           {/* image */}
           <div className="relative w-[435px] h-[596px] -bottom-18">
@@ -184,11 +184,11 @@ function ProductSummary() {
 
         {/* ------------------ decoration ------------------ */}
         {/* ellipse-9 */}
-        <div className="absolute bottom-5 right-[750px] size-[1137px] bg-purple-400 rounded-full -z-30" />
+        <div className="absolute bottom-5 right-[750px] size-[1137px] gradient-blue rounded-full -z-30" />
         {/* ellipes-8 */}
-        <div className="absolute bottom-0 left-[601px] size-[1137px] bg-indigo-600 rounded-full -z-30" />
+        <div className="absolute bottom-0 left-[601px] size-[1137px] gradient-blue-strong rounded-full -z-30" />
         {/* ellipes-12 */}
-        <div className="absolute -bottom-[278px] right-[994px] size-[672px] bg-red-600 rounded-full -z-30" />
+        <div className="absolute -bottom-[278px] right-[994px] size-[672px] gradient-lime-strong rounded-full -z-30" />
       </section>
     </section>
   );
