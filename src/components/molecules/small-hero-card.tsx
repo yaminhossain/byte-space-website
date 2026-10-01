@@ -2,7 +2,7 @@ import { cn } from "@/utils/helper";
 import StarRating from "../atoms/star-rating";
 import { ReactNode } from "react";
 
-type iconColor = "#D4FB20" | "#CED0D3";
+type iconColor = "#D4FB20" | "#CED0D3" | "#003BE2";
 
 interface SmallHeroCardProps {
   className?: string;
@@ -41,7 +41,7 @@ function SmallHeroCard({
 
         {/* Star Rating */}
         {(rating || starIconColor) && (
-          <StarRating rating={rating} iconColor={starIconColor} />
+          <StarRating rating={rating} />
         )}
       </div>
 

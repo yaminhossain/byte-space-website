@@ -7,9 +7,16 @@ interface FacePileProps {
   count?: number | string;
   size?: AvatarSize;
   className?: string;
+  facePileCountBg?: "bg-crimson-400" | "bg-black-950";
 }
 
-function FacePile({ images, count, size = "md", className }: FacePileProps) {
+function FacePile({
+  images,
+  count,
+  size = "md",
+  className,
+  facePileCountBg = "bg-crimson-400",
+}: FacePileProps) {
   return (
     <div className={cn("flex items-center", className)}>
       {images.map((image, index) => (
@@ -25,7 +32,9 @@ function FacePile({ images, count, size = "md", className }: FacePileProps) {
         <div
           className={cn(
             "relative z-10 -ml-3 flex shrink-0 items-center justify-center rounded-full",
-            "bg-crimson-400 label-xs text-black-950",
+            "label-xs text-black-950",
+            facePileCountBg,
+            facePileCountBg === "bg-black-950" && "text-black-50",
             size === "sm" && "size-8 ",
             size === "md" && "size-10.75 ",
           )}
