@@ -15,6 +15,8 @@ interface CourseCardProps {
   heading: string;
   authorName: string;
   rating: string;
+  iconColor?: "#CED0D3" | "#D4FB20";
+  facePileCountBg?: "bg-crimson-400" | "bg-black-950";
 }
 
 function CourseCard({
@@ -25,6 +27,8 @@ function CourseCard({
   heading,
   authorName,
   rating,
+  iconColor = "#CED0D3",
+  facePileCountBg = "bg-crimson-400",
 }: CourseCardProps) {
   return (
     <div
@@ -59,7 +63,11 @@ function CourseCard({
       <div className="mt-5">
         <div className="flex justify-between">
           <h1 className="text-black-950 heading-xs">{heading}</h1>
-          <StarRating iconColor="#CED0D3" rating={rating} className="body-lg" />
+          <StarRating
+            iconColor={iconColor}
+            rating={rating}
+            className="body-lg"
+          />
         </div>
         <p className="body-xs text-black-700">
           by <span className="text-electric-violet-800">${authorName}</span>
@@ -73,7 +81,11 @@ function CourseCard({
           icon={<SignalCellularAlt />}
           className="flex justify-center items-center"
         />
-        <FacePile images={courseCardAvatars} count={"26"} />
+        <FacePile
+          facePileCountBg={facePileCountBg}
+          images={courseCardAvatars}
+          count={"26"}
+        />
       </div>
 
       {/* Amount Section*/}

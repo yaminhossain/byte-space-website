@@ -23,22 +23,16 @@ function NavBar() {
   const pathName = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 z-50 h-30 w-full bg-electric-violet-800 grid-background">
-      <div className="container flex justify-between h-30 py-10">
-        {/* Logo */}
-        <div>
-          {pathName !== "/sign-in" && pathName !== "/sign-up" ? (
+   ( pathName !== "/sign-up" &&
+    pathName !== "/sign-in") && (
+      <nav className="fixed top-0 left-0 z-50 h-30 w-full bg-electric-violet-800 grid-background">
+        <div className="container flex justify-between h-30 py-10">
+          {/* Logo */}
+          <div>
             <Link href="/">
               <NavBarLogo />
             </Link>
-          ) : (
-            <Link href="/">
-              <ByteSpaceLogo />
-            </Link>
-          )}
-        </div>
-
-        {pathName !== "/sign-in" && pathName !== "/sign-up" && (
+          </div>
           <>
             {/* Main navigation */}
             <div className="body-md flex gap-6 text-white">
@@ -70,9 +64,9 @@ function NavBar() {
               ))}
             </div>
           </>
-        )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+    )
   );
 }
 

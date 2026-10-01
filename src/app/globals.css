@@ -216,5 +216,14 @@
   );
   /* backdrop-filter: blur(40px); */
 }
-
-
+/* 404 gradient */
+@utility gradient-404 {
+  background: linear-gradient(
+    180deg,
+    #d4fb20 0%,
+    rgba(212, 251, 32, 0.96) 25%,
+    rgba(212, 251, 32, 0.81) 50.5%,
+    rgba(212, 251, 32, 0.61) 68%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
