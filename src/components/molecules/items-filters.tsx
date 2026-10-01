@@ -15,7 +15,7 @@ function ItemsFilters() {
             />
           }
           text="Filter"
-          className="bg-white border border-gray-200 px-4 py-3.5"
+          className="h-12 bg-white border border-gray-200 px-4 py-3.5 flex justify-center items-center"
         />
         <Badge
           icon={
@@ -27,7 +27,7 @@ function ItemsFilters() {
             />
           }
           text="Level"
-          className="bg-white border border-gray-200 px-4 py-3.5"
+          className="h-12 bg-white border border-gray-200 px-4 py-3.5 flex justify-center items-center"
         />
         <Badge
           icon={
@@ -39,21 +39,21 @@ function ItemsFilters() {
             />
           }
           text="Category"
-          className="bg-white border border-gray-200 px-4 py-3.5"
+          className="h-12 bg-white border border-gray-200 px-4 py-3.5 flex justify-center items-center"
         />
       </div>
       <div>
         <Badge
           icon={
             <Image
-              src={"/icons/courses/most-relevant.svg"}
+              src={"/icons/courses/most-relevent.svg"}
               width={13}
               height={13}
               alt="icon"
             />
           }
           text="Most relevant"
-          className="bg-white border border-gray-200 px-4 py-3.5"
+          className="h-12 bg-white border border-gray-200 px-4 py-3.5 flex justify-center items-center"
         />
       </div>
     </div>
