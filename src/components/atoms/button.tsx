@@ -4,23 +4,36 @@ import React, { ReactNode } from "react";
 interface IButtonProps {
   children: ReactNode;
   className?: string;
-  variant?: "primary";
+  variant?: "primary" | "borderOnly";
+  size?: "normal" | "sm";
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const variants = {
-  primary: "py-3 px-6 bg-crimson-400 rounded-3xl w-full label-lg",
+  primary: "bg-crimson-400 text-black-950",
+  borderOnly: "border border-black-200 text-black-700",
+};
+const sizes = {
+  normal: "py-3 px-6 label-lg",
+  sm: "px-4 py-2 label-md",
 };
 
 function Button({
   children,
   className,
   variant = "primary",
+  size = "normal",
   onClick,
 }: IButtonProps) {
   return (
     <button
-      className={cn(variants[variant], "cursor-pointer", className)}
+      className={cn(
+        " rounded-3xl w-full",
+        variants[variant],
+        sizes[size],
+        "cursor-pointer",
+        className,
+      )}
       onClick={onClick}
     >
       {children}
