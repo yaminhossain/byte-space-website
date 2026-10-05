@@ -1,5 +1,6 @@
 import Badge from "@/components/atoms/badge";
 import Button from "@/components/atoms/button";
+import CourseVideoPlayer from "@/components/atoms/course-video-player";
 import PeopleIcon from "@/components/atoms/svg-icons/people-icon";
 import ShareIcon from "@/components/atoms/svg-icons/share-icon";
 import SignalCellularAlt from "@/components/atoms/svg-icons/signal-cellular-alt";
@@ -56,7 +57,9 @@ function CoursePage() {
             <ShareIcon /> <span>Share</span>
           </Button>
         </div>
-
+        <div className="container mt-[59px]">
+          <CourseVideoPlayer />
+        </div>
       </section>
     </section>
   );
