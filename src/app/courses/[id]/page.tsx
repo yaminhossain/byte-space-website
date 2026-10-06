@@ -5,7 +5,7 @@ import PeopleIcon from "@/components/atoms/svg-icons/people-icon";
 import ShareIcon from "@/components/atoms/svg-icons/share-icon";
 import SignalCellularAlt from "@/components/atoms/svg-icons/signal-cellular-alt";
 import Image from "next/image";
-import React from "react";
+import styles from "./style.module.css";
 
 function CoursePage() {
   return (
