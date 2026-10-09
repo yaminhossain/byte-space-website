@@ -11,7 +11,7 @@ interface CourseTabsProps {
   searchParams: Record<string, string | string[] | undefined>;
 }
 
-const tabs: string[] = ["about", "lessons", "reviews"];
+const tabs: string[] = ["about", "lesson", "reviews"];
 
 async function CourseTabs({ params, searchParams }: CourseTabsProps) {
   return (
@@ -35,9 +35,13 @@ async function CourseTabs({ params, searchParams }: CourseTabsProps) {
         ))}
       </div>
 
-      {searchParams.tab === "about" && <CourseDetailsAboutTab />}
-      {searchParams.tab === "lessons" && <CourseDetailsLessonsTab />}
-      {searchParams.tab === "reviews" && <CourseDetailsReviewsTab />}
+      <div className="max-w-[725px] w-full min-h-100">
+        {searchParams.tab === "about" && <CourseDetailsAboutTab />}
+        {searchParams.tab === "lesson" && <CourseDetailsLessonsTab />}
+        {searchParams.tab === "reviews" && (
+          <CourseDetailsReviewsTab searchParams={searchParams} />
+        )}
+      </div>
     </>
   );
 }

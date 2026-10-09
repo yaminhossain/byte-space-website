@@ -25,6 +25,8 @@ async function CoursePage({ params, searchParams }: CoursePagePropsType) {
       ? await searchParams
       : { tab: "about" };
 
+  console.log("Resolved Search Params: ", resolvedSearchParams);
+
   return (
     <section>
       {/* Section 1: Blur grid background */}
