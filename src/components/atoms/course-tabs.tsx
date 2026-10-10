@@ -7,7 +7,6 @@ import CourseDetailsReviewsTab from "../molecules/course-details-reviews-tab";
 
 interface CourseTabsProps {
   params: { id: string };
-  // searchParams: { [key: string]: string | string[] | undefined };
   searchParams: Record<string, string | string[] | undefined>;
 }
 

@@ -1,4 +1,3 @@
-import React from "react";
 import RatingOverviewCard from "./rating-overview-card";
 import ReviewCard from "./review-card";
 import Tab from "../atoms/tab";
@@ -24,19 +23,28 @@ function CourseDetailsReviewsTab({
   searchParams,
 }: CourseDetailsReviewsTabProps) {
   const requestedRating = searchParams.rating;
+  console.log("Requested Rating: ", requestedRating);
+
+  // ensures correct search parameter and guard "undefined" through "AND" operation
   const activeRating =
     typeof requestedRating === "string" &&
     ratingTabOptions.some((option) => option.value === requestedRating)
       ? requestedRating
       : "all-rating";
+
+  // ensures correct rating from rating tab options
   const selectedRating =
     ratingTabOptions.find((option) => option.value === activeRating)?.rating ??
     null;
+
+  console.log("Selected Rating: ", selectedRating);
+  // filter the review based on rating
   const filteredReviews =
     selectedRating === null
       ? reviews
       : reviews.filter((review) => review.rating === selectedRating);
 
+  console.log("Filtered Review", filteredReviews);
   return (
     <div className="flex flex-col gap-6">
       <h1 className="heading-xs text-black-950">What Learners Are Saying</h1>
@@ -74,7 +82,9 @@ function CourseDetailsReviewsTab({
                 <StarRating
                   className={cn(
                     "label-md",
-                    activeRating === value ? "text-black-950" : "text-black-700",
+                    activeRating === value
+                      ? "text-black-950"
+                      : "text-black-700",
                   )}
                   rating={rating}
                   iconColor="#4B4C53"
