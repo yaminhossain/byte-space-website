@@ -20,7 +20,7 @@ function Hero() {
           business with our wide range of courses.
         </p>
 
-        <div className="flex gap-4 mt-15 items-center justify-center">
+        <div className="relative z-30 flex gap-4 mt-15 items-center justify-center">
           <SearchField placeholder="Course, topic, creator" />
           <Button className="w-26 h-11.5">Search</Button>
         </div>

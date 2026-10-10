@@ -1,13 +1,13 @@
 import { cn } from "@/utils/helper";
-import { MouseEvent } from "react";
+import { MouseEvent, ReactNode } from "react";
 
-interface TabTypes {
-  children: string;
+interface TabPropsTypes {
+  children: ReactNode;
   className?: string;
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-function Tab({ children, className, onClick }: TabTypes) {
+function Tab({ children, className, onClick }: TabPropsTypes) {
   return (
     <button
       className={cn(

@@ -3,7 +3,7 @@ import Image from "next/image";
 import StarRating from "../atoms/star-rating";
 import Pill from "../atoms/pill";
 import Badge from "../atoms/badge";
-import SignalCellularAlt from "../atoms/svg-icons/SignalCellularAlt";
+import SignalCellularAlt from "../atoms/svg-icons/signal-cellular-alt";
 import FacePile from "../atoms/face-pile";
 import { courseCardAvatars } from "@/constants/constants";
 
