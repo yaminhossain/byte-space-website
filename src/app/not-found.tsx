@@ -11,9 +11,7 @@ function NotFound() {
               text-[480px]
               font-semibold
               leading-[100%]
-              bg-linear-to-b
-              from-[#D4FB20]
-              to-[#D4FB20]/60
+              bg-[linear-gradient(180deg,#D4FB20_0%,rgba(212,251,32,0.96)_25%,rgba(212,251,32,0.81)_50.5%,rgba(212,251,32,0.61)_68%,rgba(255,255,255,0)_100%)]
               bg-clip-text text-transparent
             "
           >
