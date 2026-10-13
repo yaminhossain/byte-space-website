@@ -175,7 +175,7 @@ async function CoursePage({ params, searchParams }: CoursePagePropsType) {
               Future!
             </p>
 
-            <Link href={"#"}>
+            <Link href={`/creators/${1}`}>
               <Button variant="borderOnly" size="sm" className="w-[142px]">
                 See Full Profile
               </Button>
